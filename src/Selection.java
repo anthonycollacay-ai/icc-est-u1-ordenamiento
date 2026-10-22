@@ -41,7 +41,7 @@ public class Selection
         System.out.println("Pasadas: " + pasadas);
         System.out.println("Cambios: " + cambios);
         System.out.println("Comparaciones: " + comparaciones);
-        System.out.println("Ordenado Asc: " );
+        
         
     }
 }
