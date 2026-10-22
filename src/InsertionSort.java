@@ -23,6 +23,8 @@ public class InsertionSort
 
             //colocamos el elemento actual en su posición correcta
             arreglo[j + 1] = aux;
+
+            // Agregamos un mensaje para indicar en qué posición se insertó el elemento actual
             if(j + 1 != i)
             {
                 System.out.println("El aux = " + aux + " se inserta en la posición " + (j + 1));
