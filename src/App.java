@@ -1,5 +1,8 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+//import java.util.Comparator;
+import java.util.List;
 
 import models.Estudiante;
 
@@ -9,6 +12,49 @@ public class App {
         //runEjemplosPrimitivos();
         runEjemplosObjetos();  
         runComparators();
+        runComparatorsObj();
+        runComparatorsObj2();
+    }
+
+    private static void runComparatorsObj2()
+    {
+        Estudiante e1 = new Estudiante("Anthony", 10);
+
+        Estudiante[] estudiantes = {e1, 
+                new Estudiante("Maria", 7), 
+                new Estudiante("Diego", 3.5), 
+                new Estudiante("Pedro", 6.8)
+        };
+
+        //e es el nombre de la variable, la -> e.getNota() es la funcion que se ejecuta para obtener el valor de la nota del estudiante
+        Comparator<Estudiante> compNota = Comparator.comparingDouble(e -> e.getNota());
+        Arrays.sort(estudiantes, compNota);
+
+        //llamamos al metodo printArregloEstudiantes para imprimir el arreglo de estudiantes ordenado por nota
+        printArregloEstudiantes(estudiantes);
+
+        List<Estudiante> estudiantesLista = new ArrayList<>(List.of(estudiantes));
+
+        //ordenar por la nota
+
+        //al seer lista utilizamos el metodo sort de la clase List, que recibe el comparador como parametro
+        estudiantesLista.sort(compNota);
+        System.out.println(estudiantesLista);
+    }
+
+    private static void runComparatorsObj()
+    {
+        List<Integer> numeros = new ArrayList<>(List.of(5,6,4,1,2,3));
+        
+        //orden de menor a mayor
+        //numeros.sort(Comparator.naturalOrder());
+        numeros.sort(null);
+        System.out.println(numeros);
+
+        //Orden de mayor a menor
+
+        numeros.sort(Comparator.reverseOrder());
+        System.out.println(numeros);
     }
 
     private static void runComparators()
