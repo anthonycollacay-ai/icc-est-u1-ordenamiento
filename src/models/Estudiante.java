@@ -37,6 +37,4 @@ public class Estudiante
         return "Estudiante [" + name + " | " + nota + "]";
     }
 
-    
-    
 }

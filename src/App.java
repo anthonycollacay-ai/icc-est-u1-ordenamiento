@@ -24,7 +24,7 @@ public class App {
 
         //con dos parametros es objetos
         //Original debe de ser un arreglo de objetos, no de primitivos
-        //Arrays.sort(original, Comparator.reverseOrder());
+        //Arrays.sort(original, Comparator.reversePOrder());
     }
 
     private static void runEjemplosObjetos() 
